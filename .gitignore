@@ -22,3 +22,16 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+
+# The .env file is used for both dev and test and creates problems
+.env
+
+# .env.*.local are where we put actual secrets we need for dev and test
+# so we really don't want this in version control
+.env.*.local
+/public/packs
+/public/packs-test
+/node_modules
+/yarn-error.log
+yarn-debug.log*
+.yarn-integrity

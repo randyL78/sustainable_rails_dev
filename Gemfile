@@ -5,7 +5,18 @@ ruby '2.7.2'
 
 # All runtime config comes from UNIX environment but we use dotenv to store
 # that in files for development and testing
-gem "dotenv-rails", groups: [:development, :testing]
+gem "dotenv-rails", groups: [:development, :test]
+
+# Brakeman audits our code for security vulnerabilities
+gem 'brakeman'
+
+# bundler-audit enables bundle audit which analyzes our dependencies for
+# security vulnerabilities.
+gem 'bundler-audit'
+
+# lograge changes Rails' logging to a more traditional one-line-per-event
+# format
+gem 'lograge'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2'

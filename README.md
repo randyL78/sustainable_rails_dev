@@ -1,24 +1,16 @@
-# README
+# Widgets - The App for Widgets
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Setup
 
-Things you may want to cover:
+1. Pull down the app from version control
+2. Make sure you have Postgres running
+3. `bin/setup`
 
-* Ruby version
+## Running The App
 
-* System dependencies
+1. `bin/start`
 
-* Configuration
+## Production
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* All runtime configurations should be supplied in the UNIX environment
+* Rails logging uses lograge. `bin/setup help` can tell you how to use this

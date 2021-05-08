@@ -3,10 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.2'
 
-# All runtime config comes from UNIX environment but we use dotenv to store
-# that in files for development and testing
-gem "dotenv-rails", groups: [:development, :test]
-
 # Brakeman audits our code for security vulnerabilities
 gem 'brakeman'
 
@@ -46,6 +42,13 @@ gem 'bootsnap', '>= 1.4.2', require: false
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  # Use RSpec ove the built in Minitest suite
+  gem 'rspec-rails', '~> 5.0.0'
+
+  # All runtime config comes from UNIX environment but we use dotenv to store
+  # that in files for development and testing
+  gem 'dotenv-rails'
 end
 
 group :development do
